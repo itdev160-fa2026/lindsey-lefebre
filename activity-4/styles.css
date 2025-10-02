@@ -1,0 +1,150 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+h1 {
+    padding: 15px;
+    margin: 5px 40px;
+}
+
+p {
+    padding: 15px;
+    margin: 5px 40px;
+}
+
+.todo-container {
+    background-color: #DBFCFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color: rgb(139, 194, 194);
+    padding: 20px;
+    margin: 50px;
+}
+
+.input-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.input-section h2 {
+    font-size: 20px;
+    padding: 20px 3px;
+}
+
+#taskInput {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #aecacc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #607f82;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 16px;
+    font-weight: 650px;
+    background-color: rgb(211, 63, 135);
+    color: white;
+    border: 1px solid rgb(188, 90, 137);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(82, 82, 82, 0.5);
+}
+
+button:hover {
+    background-color: rgb(230, 81, 153);
+}
+
+#taskCount {
+    font-size: 1em;
+    color: #666;
+    font-weight: normal;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: #74beca;
+    border: 1px solid #dee2e6;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item:hover {
+    background-color: #8ec5cd;
+    transform: translateY(-1px);
+}
+
+.task-item.done {
+    background-color: #bcdbe0;
+    color: #434f51;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.task-item.done:hover {
+    background-color: #dcf7fa;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-status {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-done {
+    background-color: #afe3de;
+    color: #487672;
+}
+
+.stats-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #74beca;
+    text-align: center;
+}
+
+#taskStats {
+    font-size: 1.1em;
+    color: #666;
+}
+
+#output {
+    margin-top: 30px;
+    padding: 35px;
+    background-color: #f9f4e2;
+    color: black;
+    border-radius: 5px;
+}
