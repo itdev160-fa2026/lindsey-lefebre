@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.math-widget {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.input-section {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr 1.25fr;
+    padding: 10px 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.op-shorthand {
+    margin: 50px 0 10px 0;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.input-group input {
+    width: 160px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.operations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.operation {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.operation:hover {
+    background-color: #45a049;
+}
+
+.clear {
+    background-color: #f44336;
+    color: white;
+    margin-top: 20px;
+}
+
+.clear:hover {
+    background-color: #da190b;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.result.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.result.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+#output {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e8f5e8;
+    border-radius: 5px;
+}
