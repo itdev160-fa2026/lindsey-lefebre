@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 6: Interactive To-Do List (Part 2)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Activity 6: Interactive To-Do List (Part 2)</h1>
+    <p id="headerText">Open the browser console (F12) to see the DOM manipulation demonstrations!</p>
+    
+    <div class="todo-container">
+        <div class="list-section">
+            <h2>Your Tasks <span id="taskCount">(0 tasks)</span></h2>
+            <ul id="todo-list"></ul>
+            <div id="emptyState" class="empty-state">
+                <p>No tasks yet. Add one below! &#128221;</p>
+            </div>
+        </div>
+
+    <div class="input-section">
+        <h2>Add New Task</h2>
+        <div class="input-controls">
+            <input type="text" id="taskInput" placeholder="Enter your task..." maxlength="100">
+            <select id="prioritySelect">
+                <option value="low">Low Priority</option>
+                <option value="medium" selected>Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+                <button id="addTaskBtn">Add Task</button>
+        </div>
+    </div>
+
+
+        <div class="filter-section">
+            <h3>Filter Tasks:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="bulk-actions">
+                <h3>Bulk Actions:</h3>
+                <button id="markAllDoneBtn" class="bulk-btn">Mark All Done</button>
+                <button id="deleteCompletedBtn" class="bulk-btn danger">Delete Completed</button>
+                <button id="clearAllBtn" class="bulk-btn danger">Clear All Tasks</button>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <div id="taskStats">
+                <span id="pendingTasks">Pending: 0</span> |
+                <span id="completedTasks">Completed: 0</span> | 
+                <span id="totalTasks">Total: 0</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="output"></div>
+    
+    <script src="demos.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
