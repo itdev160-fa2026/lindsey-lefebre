@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 7: Product Catalog Display</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Activity 7: Product Catalog</h1>
+    <p id="header-p">Open the browser console (F12) to see array and object demonstrations!</p>
+
+    <div class="catalog-container">
+        <div class="controls-section">
+            <div class="search-controls">
+                <h3>Search & Filter</h3>
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="books">Books</option>
+                </select>
+                <button id="clearFiltersBtn" class="clear-btn">Clear Filters</button>
+            </div>
+
+            <div class="results-info">
+                <span id="resultsCount">Showing all products</span>
+            </div>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+            <!-- Products will be dynamically generated here -->
+        </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
