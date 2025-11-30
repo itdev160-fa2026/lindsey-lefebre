@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 8: Quote of the Day Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Activity 8: Quote of the Day</h1>
+    <p>
+      Open the browser console (F12) to see asynchronous JavaScript
+      demonstrations!
+    </p>
+
+    <div class="quote-generator">
+      <div class="controls-section">
+        <button id="getQuoteBtn" class="btn primary">Get New Quote</button>
+      </div>
+
+      <div id="loadingIndicator" class="loading-indicator hidden">
+        <div class="spinner"></div>
+        <span>Loading quote...</span>
+      </div>
+
+      <div id="errorDisplay" class="error-display hidden">
+        <span class="error-icon">&#9888;</span>
+        <span id="errorMessage"></span>
+        <button id="retryBtn" class="btn small">Retry</button>
+      </div>
+
+      <div id="quoteContainer" class="quote-container">
+        <p class="instruction-text">Click "Get New Quote" to start!</p>
+      </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="demo.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
