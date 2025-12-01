@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 9: Contact Form Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Activity 9: Contact Form Validation</h1>
+    <p>Open the browser console (F12) to see form handling demonstrations.</p>
+
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Contact Us</h2>
+        <p>
+          Please fill out all required fields. Validation happens in real-time!
+        </p>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+          <div class="error-message" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input
+                type="text"
+                id="phone"
+                name="phone"
+                required
+                placeholder="Enter your phone number"
+            />
+            <div class="error-message" id="phoneError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="your.email@example.com"
+          />
+          <div class="error-message" id="emailError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Please select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Technical Support</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="error-message" id="subjectError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Please enter your message here (minimum 10 characters)..."
+            rows="5"
+          ></textarea>
+          <div class="error-message" id="messageError"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="submit-btn" disabled>
+            Send Message
+          </button>
+          <button type="button" id="resetBtn" class="reset-btn">
+            Reset Form
+          </button>
+        </div>
+
+        <div class="form-status">
+          <div id="formSuccess" class="success-status hidden">
+            <span class="icon">&#9989;</span>
+            <span>Thank you! Your message has been sent successfully.</span>
+          </div>
+          <div id="formError" class="error-status hidden">
+            <span class="icon">&#10060;</span>
+            <span id="formErrorMessage"
+              >Please fix the errors above and try again.</span
+            >
+          </div>
+        </div>
+      </form>
+
+      <div class="validation-info">
+        <h3>Validation Rules:</h3>
+        <ul>
+          <li><strong>Name:</strong> Required field</li>
+          <li><strong>Email:</strong> Valid email format, required</li>
+          <li><strong>Subject:</strong> Must select an option</li>
+          <li><strong>Message:</strong> Minimum 10 characters, required</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
