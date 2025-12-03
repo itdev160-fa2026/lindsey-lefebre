@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 10: Tic-Tac-Toe with localStorage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Activity 10: Tic-Tac-Toe</h1>
+    <p>
+      Open the browser console (F12) to see localStorage demonstrations!
+    </p>
+
+    <div class="game-container">
+      <div class="game-section">
+        <div class="game-info">
+          <h2>Tic-Tac-Toe Game</h2>
+          <div class="status-message" id="statusMessage">
+            Player X's turn
+          </div>
+        </div>
+
+        <div class="game-board" id="gameBoard">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="game-controls">
+          <button id="newGameBtn" class="btn primary">New Game</button>
+          <button id="resetStatsBtn" class="btn secondary">
+            Reset Statistics
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h2>Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="totalGames">0</div>
+            <div class="stat-label">Total Games</div>
+          </div>
+          <div class="stat-card x-wins">
+            <div class="stat-value" id="xWins">0</div>
+            <div class="stat-label">X Wins</div>
+          </div>
+          <div class="stat-card o-wins">
+            <div class="stat-value" id="oWins">0</div>
+            <div class="stat-label">O Wins</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="draws">0</div>
+            <div class="stat-label">Draws</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="scripts.js"></script>
+  </body>
+  </html>
